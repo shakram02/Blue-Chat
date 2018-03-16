@@ -5,7 +5,7 @@ class ChatChannel(listenerIp: String, listenerPort: Int) {
     private val server = BlueServer()
     private val client = BlueClient()
     val onReceived = server.onReceived
-    val onConnected = server.onReceived
+    val onConnected = client.onConnected
 
     init {
         server.start(listenerIp, listenerPort)
